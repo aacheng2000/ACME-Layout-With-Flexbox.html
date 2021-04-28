@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: dodgerblue;
+  padding: 1rem;
+  align-items: center;
+}
+nav a{
+  color: cornsilk;
+  font-family: Verdana;
+  font-size: 1rem;
+  text-decoration: none;
+}
+nav a:first-child{
+  font-size: 2rem;
+}
+nav a:last-child{
+  margin-right:12rem;
+}
+nav a:nth-child(2){
+  font-weight: 600;
+}
+body{
+  display:flex;
+  flex-direction:column;
+}
+#userstitle {
+  margin:1rem;
+}
+#title2 {
+  margin-bottom: 1rem;
+}
+#userstitle, #title2{
+ 
+  font-family: Verdana;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#userscreate{
+  border: 1px;
+
+  display:flex;  
+  justify-content:center;
+}
+#form{
+  border: 1px solid;
+  border-radius:6px;
+  width: 40rem;
+  padding:2rem
+  
+}
+
+#form>label{
+font-family:verdana;
+font-size:1rem;
+font-weight: bold;
+}
+
+#formbox {
+display:flex;
+flex-wrap:wrap;
+flex-direction:row;
+justify-content:space-around;
+}
+.lefttext {
+width:33%;
+font-family: verdana;
+font-size: 20px;
+}
+.righttext{
+width:66%
+}
+
+.inputbox{
+width:90%;
+height:20px;
+}
+
+#buttons{
+padding:1rem;
+}
+#cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#cards>div{
+  border: 1px solid;
+  width: calc(100%/3 - 4.5rem);
+  margin:1rem;
+  border-radius:15px;
+  font-family: verdana;
+  font-size: 20px;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (max-width:700px) {
+ #cards {flex-direction: column;
+
+  }
+  #cards>div{
+    width: 90%;
+    margin: 0rem;
+  }
+  nav{
+    flex-direction:column;
+    align-items: flex-start;
+  }
+  nav a:last-child{
+    margin-right:0;
+  }
+  #formbox {
+    flex-direction:column;
+  }
+  .inputbox {
+    border-style:none;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+<nav>
+  <a href = "#">Acme Layout</a>
+  <a href = "#">Users</a>
+  <a href = "#">Departments</a>
+  <a href = "#">Contact</a>
+</nav>
+<div id="users">
+  <div id = "userstitle">Users</div>
+  <div id = "userscreate">
+    <div id = "form">
+      <div id = "title2">Create A User</div>
+      <div id="formbox">
+      <div class="lefttext">First name</div>
+      <div class = "righttext"><input type="text" class="inputbox"     name="fname"></div>
+      <div class ="lefttext">Last name</div>
+      <div class = "righttext"><input type="text" class = "inputbox" name="lname"></div>
+      <div class = "lefttext">Department</div>
+      <div class = "righttext"><select class = "inputbox"><option value = "none">-- none --</option>
+               </select></div>
+  <div id="buttons">
+      <button type = "button">Clear</button>
+      <button type = "button">Save</button>
+  </div>
+      </div> <!-- formbox end -->
+    </div>
+  </div>
+</div>
+<div id="cards">
+  <div><b>User A</b><BR><BR>Some text for the user</div>
+  <div><b>User A</b><BR><BR>Some text for the user. Some text for the user. Some text for the user. Some text for the user.</div>
+  <div><b>User A</b><BR><BR>Some text for the user</div>
+  <div><b>User A</b><BR><BR>Some text for the user</div>
+  <div><b>User A</b><BR><BR>Some text for the user</div>
+  <div><b>User A</b><BR><BR>Some text for the user</div>
+  <div><b>User A</b><BR><BR>Some text for the user</div>
+
+</div>
+</body>
+</html>
